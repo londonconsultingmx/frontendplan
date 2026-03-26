@@ -287,6 +287,63 @@
   .ac-none{background:#f5f0ed;color:#999;border:1px solid #ddd}
 
 
+  /* ── PÁGINA 4: VISIÓN EJECUTIVA ── */
+  .vision-hero { background: linear-gradient(135deg, var(--dark) 0%, #002e28 60%, #001a16 100%); border-radius: 8px; padding: 48px 40px; margin-bottom: 32px; text-align: center; }
+  .vision-hero h1 { font-family: Georgia, serif; font-size: 32px; color: var(--white); margin-bottom: 8px; font-weight: 400; letter-spacing: 0.03em; }
+  .vision-hero p { font-size: 13px; color: var(--light); max-width: 700px; margin: 0 auto; line-height: 1.7; }
+  .vision-hero .vision-tagline { font-size: 11px; color: var(--green); font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 16px; }
+
+  .vision-section { margin-bottom: 36px; }
+  .vision-section-title { font-family: Georgia, serif; font-size: 20px; color: var(--dark); margin-bottom: 6px; }
+  .vision-section-sub { font-size: 11px; color: #888; margin-bottom: 20px; }
+
+  .antes-despues { display: grid; grid-template-columns: 1fr 60px 1fr; gap: 0; margin-bottom: 32px; }
+  .ad-col { padding: 24px; border-radius: 8px; }
+  .ad-antes { background: #f5f0ed; border: 1px solid #ddd; }
+  .ad-despues { background: #d4f5e9; border: 1px solid #a0dfc0; }
+  .ad-arrow { display: flex; align-items: center; justify-content: center; font-size: 28px; color: var(--green); font-weight: 700; }
+  .ad-col h3 { font-family: Georgia, serif; font-size: 15px; margin-bottom: 12px; }
+  .ad-antes h3 { color: #666; }
+  .ad-despues h3 { color: var(--dark); }
+  .ad-col ul { list-style: none; padding: 0; }
+  .ad-col ul li { font-size: 11px; padding: 6px 0; border-bottom: 1px solid rgba(0,0,0,0.06); line-height: 1.5; }
+  .ad-col ul li:last-child { border-bottom: none; }
+  .ad-col ul li::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 8px; vertical-align: middle; }
+  .ad-antes ul li::before { background: #ccc; }
+  .ad-despues ul li::before { background: var(--green); }
+
+  .result-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px; }
+  .result-card { background: var(--white); border: 1px solid var(--gray); border-radius: 8px; padding: 24px 20px; text-align: center; }
+  .result-card.highlight { border-color: var(--green); box-shadow: 0 0 0 1px rgba(0,184,128,0.2); }
+  .result-num { font-family: Georgia, serif; font-size: 36px; color: var(--dark); font-weight: 400; }
+  .result-label { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); margin-top: 4px; }
+  .result-desc { font-size: 10px; color: #888; margin-top: 6px; line-height: 1.5; }
+
+  .mod-result-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 32px; }
+  .mod-result { background: var(--white); border-radius: 8px; border: 1px solid var(--gray); overflow: hidden; }
+  .mod-result-header { padding: 16px 20px; display: flex; align-items: center; gap: 10px; }
+  .mod-result-num { font-size: 9px; font-weight: 700; letter-spacing: 0.2em; color: var(--cream); }
+  .mod-result-name { font-family: Georgia, serif; font-size: 16px; color: var(--white); }
+  .mod-result-e2e { font-size: 8px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.8); padding: 2px 8px; border-radius: 2px; margin-left: auto; }
+  .mod-result-body { padding: 20px; }
+  .mod-result-body p { font-size: 11px; color: #444; line-height: 1.6; margin-bottom: 12px; }
+  .mod-result-list { list-style: none; padding: 0; }
+  .mod-result-list li { font-size: 11px; padding: 5px 0; color: var(--dark); font-weight: 600; }
+  .mod-result-list li::before { content: '✦ '; color: var(--green); }
+
+  .exclusion-box { background: var(--white); border: 1px dashed #ccc; border-radius: 8px; padding: 24px 28px; }
+  .exclusion-box h3 { font-family: Georgia, serif; font-size: 15px; color: #888; margin-bottom: 12px; }
+  .exclusion-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .exclusion-chip { background: #f5f0ed; color: #999; font-size: 10px; font-weight: 600; padding: 8px 12px; border-radius: 4px; text-align: center; }
+
+  @media (max-width: 900px) {
+    .antes-despues { grid-template-columns: 1fr; gap: 12px; }
+    .ad-arrow { transform: rotate(90deg); }
+    .result-cards { grid-template-columns: repeat(2, 1fr); }
+    .mod-result-cards { grid-template-columns: 1fr; }
+    .exclusion-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
   /* ── PÁGINA 3: MÓDULOS ── */
   .mod-cards { display: flex; flex-direction: column; gap: 20px; }
 
@@ -343,6 +400,7 @@
   <div class="tab" onclick="showPage('sitemap',this)">01 · Site Map</div>
   <div class="tab" onclick="showPage('permisos',this)">02 · Matriz de Permisos</div>
   <div class="tab" onclick="showPage('modulos',this)">03 · Módulos & Sprint 01</div>
+  <div class="tab" onclick="showPage('vision',this)">04 · Sprint 01 — Visión Ejecutiva</div>
 </nav>
 
 <!-- ═══════════════════════════════════ -->
@@ -1119,6 +1177,190 @@
     </div>
 
   </div><!-- /mod-cards -->
+</main>
+</div>
+
+<!-- ═══════════════════════════════════ -->
+<!-- PÁGINA 4: VISIÓN EJECUTIVA        -->
+<!-- ═══════════════════════════════════ -->
+<div id="page-vision" class="page">
+<main>
+
+  <!-- HERO -->
+  <div class="vision-hero">
+    <div class="vision-tagline">Sprint 01 — Alcance y Resultados</div>
+    <h1>La Base Digital de la Operación de LCG</h1>
+    <p>El Sprint 01 digitaliza los 4 procesos core que hoy dependen de Excel, correo y memoria individual. Al terminar, LCG tendrá una plataforma unificada donde cada semana-consultor se rastrea de punta a punta — del pipeline comercial hasta la entrega en proyecto.</p>
+  </div>
+
+  <!-- OBJETIVO -->
+  <div class="vision-section">
+    <div class="vision-section-title">Objetivo del Sprint</div>
+    <div class="vision-section-sub">¿Qué se logra al completar el Sprint 01?</div>
+    <div class="result-cards">
+      <div class="result-card highlight">
+        <div class="result-num">1</div>
+        <div class="result-label">Plataforma Unificada</div>
+        <div class="result-desc">Un solo lugar para toda la operación — se eliminan silos de información entre áreas</div>
+      </div>
+      <div class="result-card highlight">
+        <div class="result-num">4</div>
+        <div class="result-label">Módulos Operativos</div>
+        <div class="result-desc">Comercial, Administración, Capital Humano y Proyectos — los procesos core del negocio</div>
+      </div>
+      <div class="result-card highlight">
+        <div class="result-num">18</div>
+        <div class="result-label">Pantallas Digitalizadas</div>
+        <div class="result-desc">18 vistas operativas con datos en tiempo real, filtros y acceso controlado por rol</div>
+      </div>
+      <div class="result-card highlight">
+        <div class="result-num">6</div>
+        <div class="result-label">Roles con Permisos</div>
+        <div class="result-desc">Cada usuario ve solo lo que le corresponde — desde el Director General hasta el Consultor</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ANTES vs DESPUÉS -->
+  <div class="vision-section">
+    <div class="vision-section-title">Antes vs Después del Sprint 01</div>
+    <div class="vision-section-sub">El cambio operativo que habilita la plataforma</div>
+    <div class="antes-despues">
+      <div class="ad-col ad-antes">
+        <h3>Hoy — Sin Plataforma</h3>
+        <ul>
+          <li>El pipeline comercial vive en un Excel que solo una persona actualiza</li>
+          <li>Para saber qué consultor está disponible hay que preguntar por correo o WhatsApp</li>
+          <li>Los contratos comerciales y laborales se rastrean en carpetas de SharePoint sin estructura</li>
+          <li>No hay visibilidad de cuántas semanas-consultor quedan en cada proyecto</li>
+          <li>La logística de viajes se solicita por correo y se pierde en bandejas de entrada</li>
+          <li>Los expedientes de consultores están incompletos o dispersos en múltiples sistemas</li>
+          <li>El onboarding de un consultor nuevo depende de la memoria del equipo de RH</li>
+          <li>Nadie tiene una vista consolidada del estado de todos los proyectos activos</li>
+        </ul>
+      </div>
+      <div class="ad-arrow">→</div>
+      <div class="ad-col ad-despues">
+        <h3>Con Sprint 01 — Plataforma Activa</h3>
+        <ul>
+          <li>Pipeline comercial en tiempo real, visible para todos los roles autorizados</li>
+          <li>Asignaciones centralizadas: quién está en qué proyecto, cuándo empieza y cuándo termina</li>
+          <li>Contratos comerciales y laborales con status, vigencia y alertas automáticas</li>
+          <li>Tracker de Semanas: semanas vendidas, consumidas y disponibles por proyecto y consultor</li>
+          <li>Solicitudes de logística estructuradas con flujo de aprobación</li>
+          <li>Expediente digital completo con checklist de documentos y vigencias</li>
+          <li>Onboarding con proceso estructurado paso a paso por cada consultor nuevo</li>
+          <li>Status de todos los proyectos en una sola vista — verde, amarillo, rojo</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESULTADOS POR MÓDULO -->
+  <div class="vision-section">
+    <div class="vision-section-title">Lo que Habilita Cada Módulo</div>
+    <div class="vision-section-sub">Resultados concretos que se obtienen al completar el Sprint 01</div>
+    <div class="mod-result-cards">
+
+      <div class="mod-result">
+        <div class="mod-result-header m01-h">
+          <span class="mod-result-num">01</span>
+          <span class="mod-result-name">Comercial</span>
+          <span class="mod-result-e2e">L2C</span>
+        </div>
+        <div class="mod-result-body">
+          <p>Visibilidad completa del embudo de ventas y la demanda proyectada de semanas-consultor. El equipo comercial y la dirección operan sobre los mismos datos.</p>
+          <ul class="mod-result-list">
+            <li>Pipeline con etapas, montos y probabilidad de cierre en tiempo real</li>
+            <li>Planeación de demanda: semanas-consultor proyectadas por trimestre</li>
+            <li>Directorio de clientes y cuentas con historial de proyectos</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mod-result">
+        <div class="mod-result-header m02-h">
+          <span class="mod-result-num">02</span>
+          <span class="mod-result-name">Administración</span>
+          <span class="mod-result-e2e">A2D · H2R</span>
+        </div>
+        <div class="mod-result-body">
+          <p>Control administrativo de la operación: contratos, asignaciones, logística y contratos laborales dejan de depender de correos y archivos sueltos.</p>
+          <ul class="mod-result-list">
+            <li>Contratos comerciales con status, vigencia y vinculación a proyecto</li>
+            <li>Asignaciones de consultor a proyecto con fechas y status</li>
+            <li>Solicitudes de logística y viáticos con flujo de aprobación</li>
+            <li>Contratos laborales centralizados con alertas de vencimiento</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mod-result">
+        <div class="mod-result-header m03-h">
+          <span class="mod-result-num">03</span>
+          <span class="mod-result-name">Capital Humano</span>
+          <span class="mod-result-e2e">H2R</span>
+        </div>
+        <div class="mod-result-body">
+          <p>El ciclo de vida completo del consultor digitalizado — desde que es candidato hasta que tiene expediente activo. Es el módulo más completo del Sprint 01.</p>
+          <ul class="mod-result-list">
+            <li>Pipeline de atracción de talento con etapas del proceso</li>
+            <li>Proceso de contratación con checklist de documentos</li>
+            <li>Onboarding estructurado paso a paso</li>
+            <li>Expediente digital con vigencias y alertas</li>
+            <li>Estructura organizacional visible para toda la empresa</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mod-result">
+        <div class="mod-result-header" style="background:#003a48;">
+          <span class="mod-result-num">04</span>
+          <span class="mod-result-name">Proyectos</span>
+          <span class="mod-result-e2e">A2D</span>
+        </div>
+        <div class="mod-result-body">
+          <p>El corazón operativo de LCG. Por primera vez, todos los involucrados ven en tiempo real cuántas semanas-consultor quedan, quién está asignado y cómo va cada proyecto.</p>
+          <ul class="mod-result-list">
+            <li>Tracker de Semanas: vendidas, consumidas y disponibles por consultor</li>
+            <li>Equipo de proyecto con roles y asignaciones activas</li>
+            <li>Status de proyecto en vista consolidada (verde/amarillo/rojo)</li>
+            <li>Clientes y cuentas vinculados a sus proyectos activos</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- QUÉ NO INCLUYE -->
+  <div class="vision-section">
+    <div class="vision-section-title">Fuera del Sprint 01</div>
+    <div class="vision-section-sub">Estos módulos se construirán en sprints posteriores — la arquitectura ya los contempla</div>
+    <div class="exclusion-box">
+      <h3>Sprint 02+</h3>
+      <div class="exclusion-grid">
+        <div class="exclusion-chip">05 · Growth Management</div>
+        <div class="exclusion-chip">06 · Finanzas</div>
+        <div class="exclusion-chip">07 · Reportería Ejecutiva</div>
+        <div class="exclusion-chip">08 · IT & Soporte</div>
+        <div class="exclusion-chip">09 · Config & Seguridad</div>
+        <div class="exclusion-chip">10 · Información General</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTA CIERRE -->
+  <div class="detail-note">
+    <div class="detail-note-icon">🎯</div>
+    <div class="detail-note-body">
+      <div class="detail-note-title">¿Por qué estos 4 módulos primero?</div>
+      <div class="detail-note-text">
+        Comercial, Administración, Capital Humano y Proyectos cubren el flujo completo de la unidad de negocio de LCG: <b>vender semanas-consultor → contratar y asignar consultores → entregar el proyecto</b>. Sin estos 4 procesos digitalizados, los módulos de Finanzas, Reportería y Growth no tienen datos confiables sobre los cuales operar. El Sprint 01 construye la base de datos operativa que alimentará todo lo demás.
+      </div>
+    </div>
+  </div>
+
 </main>
 </div>
 
