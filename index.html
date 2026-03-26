@@ -287,6 +287,18 @@
   .ac-none{background:#f5f0ed;color:#999;border:1px solid #ddd}
 
 
+  /* ── PÁGINA 5: AUTORIZACIONES ── */
+  .auth-table-wrap { overflow-x: auto; margin-bottom: 32px; }
+  table.auth-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+  table.auth-table thead th { background: var(--dark); color: var(--white); font-size: 9px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 12px 14px; text-align: left; border-bottom: 2px solid var(--green); }
+  table.auth-table tbody td { padding: 10px 14px; border-bottom: 1px solid var(--gray); vertical-align: top; line-height: 1.5; }
+  table.auth-table tbody tr:nth-child(even) { background: rgba(0,0,0,0.02); }
+  table.auth-table .auth-mod { font-weight: 700; color: var(--dark); white-space: nowrap; }
+  table.auth-table .auth-action { color: #333; }
+  table.auth-table .auth-trigger { font-size: 10px; color: #666; }
+  .auth-mod-group td { background: rgba(0,184,128,0.05) !important; }
+  .auth-mod-label { background: var(--dark); color: var(--green); font-size: 8px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; padding: 2px 8px; border-radius: 2px; display: inline-block; margin-right: 6px; }
+
   /* ── PÁGINA 4: VISIÓN EJECUTIVA ── */
   .vision-hero { background: linear-gradient(135deg, var(--dark) 0%, #002e28 60%, #001a16 100%); border-radius: 8px; padding: 48px 40px; margin-bottom: 32px; text-align: center; }
   .vision-hero h1 { font-family: Georgia, serif; font-size: 32px; color: var(--white); margin-bottom: 8px; font-weight: 400; letter-spacing: 0.03em; }
@@ -401,6 +413,7 @@
   <div class="tab" onclick="showPage('permisos',this)">02 · Matriz de Permisos</div>
   <div class="tab" onclick="showPage('modulos',this)">03 · Módulos & Sprint 01</div>
   <div class="tab" onclick="showPage('vision',this)">04 · Sprint 01 — Visión Ejecutiva</div>
+  <div class="tab" onclick="showPage('autorizaciones',this)">05 · Autorizaciones</div>
 </nav>
 
 <!-- ═══════════════════════════════════ -->
@@ -477,6 +490,7 @@
             <span class="ex-chip ex-2">KPIs rápidos por módulo</span>
             <span class="ex-chip ex-2">Módulos visibles según permisos del rol</span>
             <span class="ex-chip ex-2">Notificaciones y alertas globales</span>
+            <span class="ex-chip ex-2">Autorizaciones Pendientes</span>
           </div>
         </div>
       </div>
@@ -592,7 +606,7 @@
   <div class="platform-header">
     <div class="l1-node"><span class="dot">◆</span> LCG Back Office Platform</div>
     <div class="cv"></div>
-    <div class="l2-node">HERO HOME — Menú Módulos</div>
+    <div class="l2-node">HERO HOME — Menú Módulos + Autorizaciones Pendientes</div>
     <div class="cvd"></div>
   </div>
   <div class="legend">
@@ -607,7 +621,7 @@
   </div>
   <div class="modules">
     <div class="module-row"><div class="l3-label m01"><span class="l3-num">01 · Módulo L3</span><span class="l3-name">Comercial</span><span class="l3-e2e tL2C">L2C</span></div><div class="l4-area"><div class="l4">Pipeline</div><div class="l4">Planeación de Demanda</div><div class="l4">Clientes / Cuentas</div><div class="l4">Presupuesto Comercial</div><div class="l4">Presupuesto Facturación</div></div></div>
-    <div class="module-row"><div class="l3-label m02"><span class="l3-num">02 · Módulo L3</span><span class="l3-name">Administración</span><span class="l3-e2e tA2D">A2D · H2R</span></div><div class="l4-area"><div class="l4">Contratos Comerciales</div><div class="l4">Logística</div><div class="l4">Asignaciones</div><div class="l4">REPSE</div><div class="l4">Contrato Laboral</div><div class="l4">Per Diem</div><div class="l4">Baja</div><div class="l4">Gestión de Proveedores</div></div></div>
+    <div class="module-row"><div class="l3-label m02"><span class="l3-num">02 · Módulo L3</span><span class="l3-name">Administración</span><span class="l3-e2e tA2D">A2D · H2R</span></div><div class="l4-area"><div class="l4">Contratos Comerciales</div><div class="l4">Logística</div><div class="l4">Asignaciones</div><div class="l4">REPSE</div><div class="l4">Contrato Laboral</div><div class="l4">Per Diem</div><div class="l4">Baja</div><div class="l4">Vacaciones</div><div class="l4">Gestión de Proveedores</div></div></div>
     <div class="module-row"><div class="l3-label m03"><span class="l3-num">03 · Módulo L3</span><span class="l3-name">Capital Humano</span><span class="l3-e2e tH2R">H2R</span></div><div class="l4-area"><div class="l4">Atracción</div><div class="l4">Contratación</div><div class="l4">Onboarding</div><div class="l4">Expediente</div><div class="l4">Estructura Org.</div></div></div>
     <div class="module-row"><div class="l3-label m04"><span class="l3-num">04 · Módulo L3</span><span class="l3-name">Proyectos</span><span class="l3-e2e tA2D">A2D</span></div><div class="l4-area"><div class="l4">Clientes</div><div class="l4">Cuentas</div><div class="l4">Equipo de Proyecto</div><div class="l4">Tracker de Semanas</div><div class="l4">Status de Proyecto</div><div class="l4">Historial de Proyectos</div></div></div>
     <div class="module-row"><div class="l3-label m05"><span class="l3-num">05 · Módulo L3</span><span class="l3-name">Growth Management</span><span class="l3-e2e tH2R">H2R</span></div><div class="l4-area"><div class="l4">PID</div><div class="l4">Eval. Resultados</div><div class="l4">Eval. Desarrollo</div><div class="l4">Knowledge</div><div class="l4">Capacitación</div><div class="l4">Cultura</div></div></div>
@@ -615,7 +629,7 @@
     <div class="module-row"><div class="l3-label m07"><span class="l3-num">07 · Módulo L3</span><span class="l3-name">Reportería Ejecutiva</span><span class="l3-e2e tR2R">R2R</span></div><div class="l4-area"><div class="l4">P&amp;L Empresa</div><div class="l4">P&amp;L Proyecto</div><div class="l4">Dash H2R</div><div class="l4">Dash A2D</div><div class="l4">Dash L2C</div><div class="l4">Dash P2P</div><div class="l4">Dash R2R</div><div class="l4">Dash I2R</div></div></div>
     <div class="module-row"><div class="l3-label m08"><span class="l3-num">08 · Módulo L3</span><span class="l3-name">IT &amp; Soporte</span><span class="l3-e2e tI2R">I2R</span></div><div class="l4-area"><div class="l4">Mesa de Ayuda</div><div class="l4">Tickets</div><div class="l4">Conocimiento</div><div class="l4">Inventario</div><div class="l4">Infraestructura</div><div class="l4">Arquitectura Sis.</div><div class="l4">SLAs</div></div></div>
     <div class="module-row"><div class="l3-label m09"><span class="l3-num">09 · Módulo L3</span><span class="l3-name">Config &amp; Seguridad</span><span class="l3-e2e tTRV">Transversal</span></div><div class="l4-area"><div class="l4">Usuarios</div><div class="l4">Permisos</div><div class="l4">Integraciones</div><div class="l4">Herramientas</div><div class="l4">Prop. Intelectual</div><div class="l4">Logs</div></div></div>
-    <div class="module-row"><div class="l3-label m10"><span class="l3-num">10 · Módulo L3</span><span class="l3-name">Información General</span><span class="l3-e2e tTRV">Transversal</span></div><div class="l4-area"><div class="l4 info">Quiénes Somos</div><div class="l4 info">Visión &amp; Misión</div><div class="l4 info">Valores</div><div class="l4 info">Políticas Internas</div><div class="l4 info">Reglamento</div><div class="l4 info">Directorio</div><div class="l4 info">Beneficios</div></div></div>
+    <div class="module-row"><div class="l3-label m10"><span class="l3-num">10 · Módulo L3</span><span class="l3-name">Información General</span><span class="l3-e2e tTRV">Transversal</span></div><div class="l4-area"><div class="l4 info">Quiénes Somos</div><div class="l4 info">Visión &amp; Misión</div><div class="l4 info">Valores</div><div class="l4 info">Políticas Internas</div><div class="l4 info">Reglamento</div><div class="l4 info">Directorio</div><div class="l4 info">Beneficios</div><div class="l4 info">Historial</div></div></div>
   </div>
 </main>
 </div>
@@ -779,6 +793,15 @@
 
   <p style="font-size:11px;color:#666;margin-bottom:28px;">Qué se ve en cada módulo, qué decisiones habilita y qué pantallas entran en Sprint 01. LCG cobra por <strong>semana-consultor</strong> — toda la lógica operativa gira alrededor del consultor asignado a un proyecto.</p>
 
+  <!-- AUTORIZACIONES PENDIENTES — Paralelo a N3 -->
+  <div style="background:linear-gradient(135deg,#004A43 0%,#002e28 100%);border-radius:8px;padding:20px 24px;margin-bottom:28px;display:flex;align-items:center;gap:20px;border:2px solid var(--green);">
+    <div style="flex-shrink:0;width:48px;height:48px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;">🔔</div>
+    <div>
+      <div style="font-family:Georgia,serif;font-size:16px;color:var(--white);margin-bottom:4px;">Autorizaciones Pendientes</div>
+      <div style="font-size:10px;color:var(--light);letter-spacing:0.04em;line-height:1.6;">Vista transversal en el Hero Home — paralela a los módulos. Centraliza todas las solicitudes que requieren aprobación del usuario: logística, viáticos, contratos, asignaciones, vacaciones y cualquier flujo que necesite visto bueno. Cada rol ve solo las autorizaciones que le corresponden. No es un módulo — es un componente siempre visible en la pantalla principal.</div>
+    </div>
+  </div>
+
   <div class="mod-cards">
 
     <!-- 01 COMERCIAL -->
@@ -854,6 +877,7 @@
             <div class="screen-chip pending">REPSE</div>
             <div class="screen-chip pending">Per Diem</div>
             <div class="screen-chip pending">Baja</div>
+            <div class="screen-chip pending">Vacaciones</div>
             <div class="screen-chip pending">Gestión de Proveedores</div>
           </div>
         </div>
@@ -1171,6 +1195,7 @@
             <div class="screen-chip future-chip">Reglamento</div>
             <div class="screen-chip future-chip">Directorio</div>
             <div class="screen-chip future-chip">Beneficios</div>
+            <div class="screen-chip future-chip">Historial</div>
           </div>
         </div>
       </div>
@@ -1324,6 +1349,235 @@
       <div class="detail-note-title">¿Por qué estos 4 módulos primero?</div>
       <div class="detail-note-text">
         Comercial ya opera con un CRM — el Sprint 01 lo integra y lo conecta con Administración, Capital Humano y Proyectos para cerrar el flujo completo: <b>oportunidad ganada → planeación de RH → asignación de consultores → activación y entrega del proyecto</b>. Sin estos 4 procesos conectados, los módulos de Finanzas, Reportería y Growth no tienen datos confiables sobre los cuales operar. El Sprint 01 construye la cadena operativa digital que alimentará todo lo demás.
+      </div>
+    </div>
+  </div>
+
+</main>
+</div>
+
+<!-- ═══════════════════════════════════ -->
+<!-- PÁGINA 5: AUTORIZACIONES          -->
+<!-- ═══════════════════════════════════ -->
+<div id="page-autorizaciones" class="page">
+<main>
+
+  <div class="draft-banner">
+    <span class="draft-label">Referencia</span>
+    <span class="draft-title">Inventario de Autorizaciones por Módulo</span>
+    <span class="draft-date">24 Abril 2025</span>
+  </div>
+
+  <p style="font-size:11px;color:#666;margin-bottom:28px;">Listado completo de todas las acciones que requieren autorización dentro de la plataforma. Cada autorización tiene un solicitante, un aprobador y un flujo definido. Esta lista alimenta el componente de <strong>Autorizaciones Pendientes</strong> del Hero Home.</p>
+
+  <div class="auth-table-wrap">
+  <table class="auth-table">
+    <thead>
+      <tr>
+        <th style="width:140px;">Módulo</th>
+        <th style="width:220px;">Autorización</th>
+        <th>Descripción</th>
+        <th style="width:160px;">Disparador</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- 01 COMERCIAL -->
+      <tr class="auth-mod-group">
+        <td class="auth-mod" rowspan="3"><span class="auth-mod-label">01</span> Comercial</td>
+        <td class="auth-action">Aprobación de Oportunidad</td>
+        <td>Validar que una oportunidad comercial cumple criterios para avanzar a propuesta formal</td>
+        <td class="auth-trigger">Oportunidad cambia a etapa "Propuesta"</td>
+      </tr>
+      <tr>
+        <td class="auth-action">Aprobación de Descuento / Tarifa Especial</td>
+        <td>Autorizar tarifas por debajo del fee estándar por semana-consultor</td>
+        <td class="auth-trigger">Tarifa propuesta menor al mínimo configurado</td>
+      </tr>
+      <tr>
+        <td class="auth-action">Cierre de Oportunidad (Ganada/Perdida)</td>
+        <td>Confirmar el resultado final de una oportunidad y disparar procesos downstream</td>
+        <td class="auth-trigger">Cambio de etapa a "Ganada" o "Perdida"</td>
+      </tr>
+
+      <!-- 02 ADMINISTRACIÓN -->
+      <tr class="auth-mod-group">
+        <td class="auth-mod" rowspan="8"><span class="auth-mod-label">02</span> Administración</td>
+        <td class="auth-action">Aprobación de Contrato Comercial</td>
+        <td>Validar términos, monto y vigencia del contrato antes de firma con el cliente</td>
+        <td class="auth-trigger">Contrato creado o modificado</td>
+      </tr>
+      <tr>
+        <td class="auth-action">Aprobación de Asignación</td>
+        <td>Autorizar la asignación de un consultor a un proyecto específico</td>
+        <td class="auth-trigger">Nueva asignación registrada</td>
+      </tr>
+      <tr>
+        <td class="auth-action">Aprobación de Logística / Viaje</td>
+        <td>Autorizar solicitud de viaje: destino, fechas, transporte y hospedaje</td>
+        <td class="auth-trigger">Solicitud de logística creada</td>
+      </tr>
+      <tr>
+        <td class="auth-action">Aprobación de Viáticos / Per Diem</td>
+        <td>Autorizar el monto de viáticos o per diem para un consultor en proyecto</td>
+        <td class="auth-trigger">Solicitud de per diem creada</td>
+      </tr>
+      <tr>
+        <td class="auth-action">Aprobación de Contrato Laboral</td>
+        <td>Validar términos del contrato laboral antes de enviar a firma del consultor</td>
+        <td class="auth-trigger">Contrato laboral generado</td>
+      </tr>
+      <tr>
+        <td class="auth-action">Aprobación de Baja</td>
+        <td>Autorizar la baja de un consultor — voluntaria o involuntaria</td>
+        <td class="auth-trigger">Solicitud de baja registrada</td>
+      </tr>
+      <tr>
+        <td class="auth-action">Aprobación de Vacaciones</td>
+        <td>Autorizar solicitud de vacaciones verificando disponibilidad y cobertura del proyecto</td>
+        <td class="auth-trigger">Solicitud de vacaciones creada</td>
+      </tr>
+      <tr>
+        <td class="auth-action">Aprobación de Proveedor</td>
+        <td>Autorizar alta o renovación de un proveedor externo</td>
+        <td class="auth-trigger">Proveedor registrado o contrato por vencer</td>
+      </tr>
+
+      <!-- 03 CAPITAL HUMANO -->
+      <tr class="auth-mod-group">
+        <td class="auth-mod" rowspan="4"><span class="auth-mod-label">03</span> Capital Humano</td>
+        <td class="auth-action">Aprobación de Candidato a Contratación</td>
+        <td>Autorizar que un candidato avance del proceso de atracción a contratación formal</td>
+        <td class="auth-trigger">Candidato completa evaluación</td>
+      </tr>
+      <tr>
+        <td class="auth-action">Aprobación de Oferta Económica</td>
+        <td>Validar el paquete de compensación antes de presentarlo al candidato</td>
+        <td class="auth-trigger">Oferta económica configurada</td>
+      </tr>
+      <tr>
+        <td class="auth-action">Aprobación de Expediente Completo</td>
+        <td>Confirmar que el expediente del consultor tiene todos los documentos requeridos y vigentes</td>
+        <td class="auth-trigger">Checklist de expediente completado</td>
+      </tr>
+      <tr>
+        <td class="auth-action">Aprobación de Cambio Organizacional</td>
+        <td>Autorizar cambios en la estructura organizacional: reportes, áreas o niveles</td>
+        <td class="auth-trigger">Solicitud de cambio de estructura</td>
+      </tr>
+
+      <!-- 04 PROYECTOS -->
+      <tr class="auth-mod-group">
+        <td class="auth-mod" rowspan="4"><span class="auth-mod-label">04</span> Proyectos</td>
+        <td class="auth-action">Aprobación de Activación de Proyecto</td>
+        <td>Autorizar el arranque formal de un proyecto — valida que contrato, equipo y logística estén listos</td>
+        <td class="auth-trigger">Proyecto creado con equipo asignado</td>
+      </tr>
+      <tr>
+        <td class="auth-action">Aprobación de Extensión de Semanas</td>
+        <td>Autorizar semanas adicionales cuando el proyecto requiere más capacidad de la pactada</td>
+        <td class="auth-trigger">Solicitud de extensión registrada</td>
+      </tr>
+      <tr>
+        <td class="auth-action">Aprobación de Cambio de Equipo</td>
+        <td>Autorizar la sustitución o adición de un consultor en un proyecto activo</td>
+        <td class="auth-trigger">Solicitud de cambio de equipo</td>
+      </tr>
+      <tr>
+        <td class="auth-action">Aprobación de Cierre de Proyecto</td>
+        <td>Confirmar el cierre formal del proyecto — valida entregables, semanas consumidas y status final</td>
+        <td class="auth-trigger">Solicitud de cierre de proyecto</td>
+      </tr>
+
+      <!-- 05 GROWTH -->
+      <tr class="auth-mod-group">
+        <td class="auth-mod" rowspan="3"><span class="auth-mod-label">05</span> Growth Mgmt.</td>
+        <td class="auth-action">Aprobación de PID</td>
+        <td>Validar el Plan Individual de Desarrollo propuesto para un consultor</td>
+        <td class="auth-trigger">PID creado o actualizado</td>
+      </tr>
+      <tr>
+        <td class="auth-action">Aprobación de Evaluación de Resultados</td>
+        <td>Confirmar la evaluación de resultados al cierre de proyecto</td>
+        <td class="auth-trigger">Evaluación completada por el evaluador</td>
+      </tr>
+      <tr>
+        <td class="auth-action">Aprobación de Cambio de Nivel</td>
+        <td>Autorizar la promoción o cambio de nivel de un consultor basado en evaluaciones</td>
+        <td class="auth-trigger">Evaluación semestral cerrada</td>
+      </tr>
+
+      <!-- 06 FINANZAS -->
+      <tr class="auth-mod-group">
+        <td class="auth-mod" rowspan="5"><span class="auth-mod-label">06</span> Finanzas</td>
+        <td class="auth-action">Aprobación de Presupuesto</td>
+        <td>Validar el presupuesto operativo anual o sus ajustes trimestrales</td>
+        <td class="auth-trigger">Presupuesto creado o modificado</td>
+      </tr>
+      <tr>
+        <td class="auth-action">Aprobación de Pago (CxP)</td>
+        <td>Autorizar un pago a proveedor o un desembolso operativo</td>
+        <td class="auth-trigger">Factura de proveedor registrada</td>
+      </tr>
+      <tr>
+        <td class="auth-action">Aprobación de Nómina</td>
+        <td>Validar la nómina del período antes de dispersión</td>
+        <td class="auth-trigger">Nómina pre-calculada lista</td>
+      </tr>
+      <tr>
+        <td class="auth-action">Aprobación de Precio de Transferencia</td>
+        <td>Autorizar tarifas de transferencia entre entidades del grupo</td>
+        <td class="auth-trigger">Precio de transferencia propuesto</td>
+      </tr>
+      <tr>
+        <td class="auth-action">Aprobación de Fee / Tarifa</td>
+        <td>Autorizar el fee semanal asignado a un consultor para un proyecto específico</td>
+        <td class="auth-trigger">Fee configurado en proyecto</td>
+      </tr>
+
+      <!-- 07 REPORTERÍA -->
+      <tr class="auth-mod-group">
+        <td class="auth-mod" rowspan="1"><span class="auth-mod-label">07</span> Reportería</td>
+        <td class="auth-action">Aprobación de Exportación de Datos Sensibles</td>
+        <td>Autorizar la descarga o exportación de reportes con información financiera o de compensaciones</td>
+        <td class="auth-trigger">Solicitud de exportación de reporte sensible</td>
+      </tr>
+
+      <!-- 08 IT -->
+      <tr class="auth-mod-group">
+        <td class="auth-mod" rowspan="2"><span class="auth-mod-label">08</span> IT &amp; Soporte</td>
+        <td class="auth-action">Aprobación de Equipo / Licencia</td>
+        <td>Autorizar la asignación de equipo de cómputo o licencias de software a un consultor</td>
+        <td class="auth-trigger">Solicitud de equipo o licencia</td>
+      </tr>
+      <tr>
+        <td class="auth-action">Aprobación de Acceso a Sistema</td>
+        <td>Autorizar acceso a sistemas externos o herramientas específicas</td>
+        <td class="auth-trigger">Solicitud de acceso creada</td>
+      </tr>
+
+      <!-- 09 CONFIG -->
+      <tr class="auth-mod-group">
+        <td class="auth-mod" rowspan="2"><span class="auth-mod-label">09</span> Config &amp; Seg.</td>
+        <td class="auth-action">Aprobación de Cambio de Permisos</td>
+        <td>Autorizar modificaciones a los permisos de un rol o usuario</td>
+        <td class="auth-trigger">Solicitud de cambio de permisos</td>
+      </tr>
+      <tr>
+        <td class="auth-action">Aprobación de Nueva Integración</td>
+        <td>Autorizar la activación o modificación de una integración con sistema externo</td>
+        <td class="auth-trigger">Configuración de integración creada</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- NOTA -->
+  <div class="detail-note">
+    <div class="detail-note-icon">🔔</div>
+    <div class="detail-note-body">
+      <div class="detail-note-title">¿Cómo funcionan las Autorizaciones Pendientes?</div>
+      <div class="detail-note-text">
+        Todas las autorizaciones listadas arriba alimentan el componente de <b>Autorizaciones Pendientes</b> del Hero Home. Cuando un usuario genera una solicitud que requiere visto bueno, el aprobador correspondiente la ve en su bandeja de autorizaciones al entrar a la plataforma. El flujo de quién aprueba qué se define en la siguiente fase: <b>Matriz de Autorizaciones por Tipo de Usuario</b>.
       </div>
     </div>
   </div>
